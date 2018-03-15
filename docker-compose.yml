@@ -1,0 +1,19 @@
+version: '3'
+services:
+  api:
+    build: .
+    container_name: "mongo-express-api"
+    ports:
+    - "8080:8080"
+    links:
+      - "db" 
+    depends_on: 
+      - "db"
+    environment:
+      - "MONGO_DB_URI=mongodb://db/test"
+
+  db:
+    image: "mongo:latest"
+    container_name: "mongo-express-db"
+    ports:
+      - "27017:27017"
