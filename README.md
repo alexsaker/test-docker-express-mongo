@@ -52,9 +52,9 @@ docker-compose up
 
 Once the service is started using docker you will be able to call the following routes using for example Postman
 
-* GET : http://<DOCKER IP>:8080/api/v1/users
-* GET : http://<DOCKER IP>:8080/api/v1/users/<USERID>
-* POST : http://<DOCKER IP>:8080/api/v1/users
+* GET : http://{{DOCKER_IP}}:8080/api/v1/users
+* GET : http://{{DOCKER_IP}}:8080/api/v1/users/{{USERID}}
+* POST : http://{{DOCKER_IP}}:8080/api/v1/users
 
 ### Testing
 
